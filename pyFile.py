@@ -1,10 +1,11 @@
+#replace <loc> with your project location
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn import svm
 from sklearn.metrics import accuracy_score
-df = pd.read_csv('C:/Users/khesh/Documents/Krishnammal/Theju/Diabetes Finder By Theju/diabetes.csv')
+df = pd.read_csv('<loc>/diabetes.csv')
 X = df.drop(columns = 'Outcome', axis = 1)
 Y = df['Outcome']
 scaler = StandardScaler()
@@ -20,9 +21,9 @@ root = Tk()
 root.geometry("676x380")
 root.resizable(0,0)
 title = root.title('DIABETES PREDICTOR')
-img = PhotoImage(file="C:/Users/khesh/Documents/Krishnammal/Theju/Diabetes Finder By Theju/iconn.png")
+img = PhotoImage(file="<loc>/iconn.png")
 root.iconphoto(False,img)
-bg = PhotoImage(file = "C:/Users/khesh/Documents/Krishnammal/Theju/Diabetes Finder By Theju/dp4.png")
+bg = PhotoImage(file = "<loc>/dp4.png")
 my_label = Label(root,image=bg)
 my_label.place(x=0,y=0)
 def submit_command():
